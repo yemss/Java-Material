@@ -3,7 +3,6 @@ public class Cooking {
     int sugar;
     int timeHours;
     int temperatureCelsius;
-    boolean isReady;
     String result;
 
     public Cooking(int salt, int sugar, int time, int temperature) {
@@ -13,37 +12,43 @@ public class Cooking {
         this.timeHours = time;
         this.temperatureCelsius = temperature;
     }
-
-    private String timeBaking() {
+    public void startCooking() {
+        System.out.println("Lets start cooking");
         if (timeHours == 120) {
-            isReady = true;
             result = "This is tasty!";
-
+            sugarAmount();
         } else if (timeHours < 120) {
-            isReady = false;
             result = "This tastes raw...";
         } else {
-            isReady = false;
             result = "This is burnt!";
         }
-        return result;
+        System.out.println(result);
     }
 
-    private String sugarAmount() {
+    private void sugarAmount() {
         if (sugar == 100) {
-            isReady = true;
             result = "This is tasty!";
-
+            saltAmount();
         } else if (sugar < 100) {
-            isReady = false;
             result = "This tastes bitter...";
         } else {
-            isReady = false;
             result = "This is too sweet!";
         }
-        return result;
+        System.out.println(result);
     }
 
+    private void saltAmount() {
+        if (salt == 50) {
+            result = "This is tasty!";
+
+        } else if (sugar < 50) {
+            result = "This tastes bland...";
+        } else {
+            result = "This is too salty!";
+        }
+        System.out.println(result);
+    }
+    /*
     public int getSalt() {
         return salt;
     }
@@ -75,4 +80,5 @@ public class Cooking {
     public void setTemperatureCelsius(int temperatureCelsius) {
         this.temperatureCelsius = temperatureCelsius;
     }
+*/
 }
