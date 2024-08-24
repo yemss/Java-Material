@@ -1,8 +1,11 @@
-
 public class Example3 {
     public static void main(String[] args) {
-        Cooking cooking = new Cooking(10, 20, 60, 120);
-        cooking.startCooking();
+        // This is a single-line comment, the compiler won't read it
+        System.out.println("Hello world!");
 
+        /* This is
+        * a Multi-line
+        * comment */
+        System.out.println("Hello again, world!");
     }
 }
